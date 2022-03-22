@@ -1,0 +1,150 @@
+.header {
+  margin-top: 50px;
+  &-logo {
+    margin-bottom: 96px;
+  }
+  &-main {
+    display: flex;
+  }
+  &-left {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    &-content {
+      flex: 1;
+      display: flex;
+    }
+    &-icons {
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 34px;
+      }
+    }
+    &-title {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      .rotate {
+        position: relative;
+        flex: 1;
+        h1 {
+          width: max-content;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(270deg);
+        }
+      }
+      .page {
+        text-align: center;
+        margin-bottom: 60px;
+        p {
+          font-weight: bold;
+          word-spacing: 15px;
+        }
+        &-max {
+          color: $brown-dark;
+        }
+      }
+    }
+  }
+  &-right {
+    flex: 1;
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 35px;
+      border-bottom: 1px solid $brown-light;
+      margin-bottom: 60px;
+    }
+    .navigation,
+    .user-icons {
+      ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0 56px;
+      }
+    }
+    &-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 46px 46px;
+      a:first-of-type {
+        background-color: $brown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &-button {
+        background-color: $brown;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        p {
+          background-color: $brown-dark;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  @include maxw(1023px) {
+    &-left {
+      &-title {
+        .page {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &-right {
+      &-nav {
+        margin-bottom: 30px;
+      }
+      .navigation,
+      .user-icons {
+        ul {
+          gap: 0 28px;
+        }
+      }
+      &-content {
+        gap: 23px 23px;
+      }
+    }
+  }
+
+  @include maxw(767px) {
+    &-left {
+      &-title {
+        display: none;
+      }
+    }
+    &-right {
+      &-nav {
+        justify-content: flex-end;
+      }
+      .navigation {
+        display: none;
+      }
+      &-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        &-button {
+          p {
+            padding: 50px 0;
+          }
+        }
+      }
+      &-logo {
+        padding: 50px 0;
+      }
+    }
+  }
+}
