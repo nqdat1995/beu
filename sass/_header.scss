@@ -1,5 +1,7 @@
 .header {
   margin-top: 50px;
+  margin-bottom: 72px;
+
   &-logo {
     margin-bottom: 96px;
   }
@@ -76,7 +78,8 @@
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 46px 46px;
-      a:first-of-type {
+      a:first-of-type,
+      a:nth-of-type(2) {
         background-color: $brown;
         display: flex;
         justify-content: center;

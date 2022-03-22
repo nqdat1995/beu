@@ -151,6 +151,7 @@ li {
 }
 .header {
   margin-top: 50px;
+  margin-bottom: 72px;
 }
 .header-logo {
   margin-bottom: 96px;
@@ -226,7 +227,8 @@ li {
   grid-template-columns: 2fr 1fr;
   gap: 46px 46px;
 }
-.header-right-content a:first-of-type {
+.header-right-content a:first-of-type,
+.header-right-content a:nth-of-type(2) {
   background-color: #CDBDAE;
   display: flex;
   justify-content: center;
@@ -277,6 +279,121 @@ li {
   }
   .header-right-logo {
     padding: 50px 0;
+  }
+}
+
+.searchmenu {
+  margin-bottom: 48px;
+}
+.searchmenu-main {
+  display: grid;
+  background-color: #EBDBCC;
+  border-radius: 10px;
+}
+.searchmenu-content {
+  grid-area: 1/3/2/12;
+}
+.searchmenu-content-heading {
+  padding: 120px 0 62px 48px;
+}
+.searchmenu-content-body {
+  padding-bottom: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchmenu-category {
+  display: flex;
+  align-items: center;
+}
+.searchmenu-category-items {
+  margin: 0 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+}
+.searchmenu-fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 80px;
+}
+.searchmenu-fields-form {
+  padding: 14px;
+  background-color: white;
+}
+.searchmenu-fields-form-input {
+  width: 200px;
+  border: 0;
+}
+.searchmenu-fields-form-button {
+  border: 0;
+  background-color: transparent;
+}
+.searchmenu-fields-icons {
+  padding-right: 20px;
+}
+.searchmenu-fields-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 42px;
+}
+@media screen and (max-width: 1023px) {
+  .searchmenu-content {
+    grid-area: 1/2/2/12;
+  }
+  .searchmenu-content-heading {
+    padding: 80px 0 44px 48px;
+  }
+  .searchmenu-category {
+    padding-left: 20px;
+  }
+  .searchmenu-category-items {
+    margin: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .searchmenu-fields {
+    gap: 0 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .searchmenu-content-body {
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px 0;
+  }
+  .searchmenu-category {
+    padding-left: 0;
+  }
+  .searchmenu-fields {
+    flex-direction: column;
+    gap: 24px 0;
+  }
+  .searchmenu-fields-form {
+    padding: 14px;
+    background-color: white;
+  }
+  .searchmenu-fields-form-input {
+    width: 200px;
+    border: 0;
+  }
+  .searchmenu-fields-form-button {
+    border: 0;
+    background-color: transparent;
+  }
+  .searchmenu-fields-icons {
+    padding-right: 20px;
+  }
+  .searchmenu-fields-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 42px;
   }
 }
 
